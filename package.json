@@ -1,25 +1,32 @@
 {
-  "name": "eslint-plugin-jasmine",
-  "description": "ESLint rules for Jasmine",
+  "name": "tslint-plugin-jasmine",
+  "description": "TSLint rules for Jasmine",
   "main": "index.js",
   "directories": {
     "doc": "docs",
     "test": "tests"
   },
   "scripts": {
-    "pretest": "standard",
-    "test": "mocha",
-    "watch": "mocha --watch",
+    "build": "tsc",
+    "lint": "tslint **/*.ts",
+    "pretest": "npm run lint",
+    "test": "npm run build && nodemon jasmine",
+    "watch": "npm test --watch",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
-    "eslint",
-    "eslint-plugin",
-    "eslintplugin",
+    "tslint",
+    "tslint-plugin",
+    "tslintplugin",
     "jasmine"
   ],
-  "author": "Tom Vincent <npm@tlvince.com> (http://tlvince.com/)",
+  "author": "Taylor Briggs <taylor.briggs.dev@gmail.com> (https://taylor-briggs.com)",
   "contributors": [
+    {
+      "name": "Tom Vincent",
+      "email": "npm@tlvince.com",
+      "url": "http://tlvince.com/"
+    },
     {
       "name": "Nicolas Fernandez",
       "url": "https://github.com/burabure"
@@ -28,18 +35,21 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tlvince/eslint-plugin-jasmine.git"
+    "url": "https://github.com/TaylorBriggs/tslint-plugin-jasmine.git"
   },
   "bugs": {
-    "url": "https://github.com/tlvince/eslint-plugin-jasmine/issues"
+    "url": "https://github.com/TaylorBriggs/tslint-plugin-jasmine/issues"
   },
-  "homepage": "https://github.com/tlvince/eslint-plugin-jasmine",
+  "homepage": "https://github.com/TaylorBriggs/tslint-plugin-jasmine",
   "devDependencies": {
-    "eslint": "^4.0.0",
+    "benchmark": "2.1.4",
+    "chai": "4.2.0",
     "ghooks": "^2.0.0",
-    "mocha": "^3.1.2",
-    "semantic-release": "^6.3.2",
-    "standard": "^10.0.0",
+    "jasmine": "3.3.1",
+    "nodemon": "1.18.9",
+    "semantic-release": "15.13.3",
+    "tslint": "5.12.1",
+    "typescript": "3.2.2",
     "validate-commit-msg": "^2.8.2"
   },
   "config": {
@@ -48,7 +58,7 @@
     }
   },
   "engines": {
-    "npm": ">=2",
-    "node": ">=4"
+    "npm": ">=6",
+    "node": ">=8"
   }
 }

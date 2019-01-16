@@ -1,7 +1,7 @@
 # Contributing
 
 * In lieu of a formal guideline, please try to mimic the existing code style
-* Please make use of the included ESLint and EditorConfig settings
+* Please make use of the included EditorConfig settings
 * Add a unit test for new/changed rules
 * Format Git commit messages according to [AngularJS conventions][cc]
 * When creating a new rule, please add it to [index.js][], document it (see
