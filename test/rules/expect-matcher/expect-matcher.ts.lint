@@ -1,0 +1,15 @@
+expect("something").toEqual("else");
+expect(true).toBeDefined();
+expect([1, 2, 3]).toEqual([1, 2, 3]);
+expect(undefined).not.toBeDefined();
+
+expect("something");
+~~~~~~~~~~~~~~~~~~~  [no-matcher]
+
+expect();
+~~~~~~~~  [no-matcher]
+
+expect(true).toBeDefined;
+~~~~~~~~~~~~              [no-matcher]
+
+[no-matcher]: Expect must have a corresponding matcher call.
