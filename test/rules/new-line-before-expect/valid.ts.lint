@@ -1,0 +1,51 @@
+describe("", function() {
+  it("", function() {
+    expect(1).toBe(1)
+  });
+});
+
+describe("", function() {
+  it("", function() {
+    expect(1).toBe(1)
+  });
+});
+
+describe("", function() {
+  it("", function() {
+    expect(1).toBe(1)
+    doMoreThings()
+  });
+});
+
+describe("", function() {
+  it("", function() {
+    var a = 1
+
+    expect(a).toBe(1)
+  });
+});
+
+it("", helper(function() {
+  var a = 1
+
+  expect(a).toBe(1);
+  expect(a).not.toBe(0);
+}));
+
+it("", helper(function() {
+  var a = 1
+
+  expect(a).toBe(1); expect(a).not.toBe(0);
+}));
+
+notJasmineTestSuite()
+expect(a)
+
+it("", helper(function() {
+  expect(1).toEqual(1);
+}));
+
+it("", helper(function() {
+
+  expect(1).toEqual(1);
+}));
