@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "./script/test-rules",
+    "test": "cross-env ./script/test-rules",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
@@ -44,6 +44,7 @@
   "devDependencies": {
     "@commitlint/cli": "7.3.2",
     "@commitlint/config-conventional": "7.3.1",
+    "cross-env": "^5.2.0",
     "husky": "1.3.1",
     "semantic-release": "15.13.3",
     "tslint": "5.12.1",
