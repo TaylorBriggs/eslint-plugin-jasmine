@@ -1,0 +1,19 @@
+it('', function(): void {})
+~~~~~~~~~~~~~~~~~~~~~~~~~~~ [missing-expect]
+
+it('', function(): void {return;})
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [missing-expect]
+
+it('', function(): void {if (foo) {} else {}})
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [missing-expect]
+
+it("", function(): void {switch (foo) {case 1: break;}})
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [missing-expect]
+
+it("", function(): void {async(function() {});})
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [missing-expect]
+
+it("", function(): void {const foo: string = bar();})
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [missing-expect]
+
+[missing-expect]: Test has no expectations.

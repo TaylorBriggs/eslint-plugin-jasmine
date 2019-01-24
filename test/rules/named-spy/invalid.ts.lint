@@ -1,0 +1,29 @@
+let spy: any = jasmine.createSpy();
+               ~~~~~~~~~~~~~~~~~ [unnamed-spy]
+
+spy = jasmine.createSpy();
+      ~~~~~~~~~~~~~~~~~ [unnamed-spy]
+
+var spy: any = jasmine.createSpy('callback');
+               ~~~~~~~~~~~~~~~~~ [wrong-name]
+
+spy = jasmine.createSpy('callback')
+      ~~~~~~~~~~~~~~~~~ [wrong-name]
+
+someObj = {
+  spy: jasmine.createSpy('someFunc')
+       ~~~~~~~~~~~~~~~~~ [wrong-name]
+};
+
+someObj = {
+  spy: jasmine.createSpy('someFunc').and.callThrough()
+       ~~~~~~~~~~~~~~~~~ [wrong-name]
+};
+
+function someFunc() {
+  this.spy = jasmine.createSpy('someFunc').and.callThrough();
+             ~~~~~~~~~~~~~~~~~ [wrong-name]
+}
+
+[unnamed-spy]: Unnamed spy.
+[wrong-name]: Variable should be named after the spy name.

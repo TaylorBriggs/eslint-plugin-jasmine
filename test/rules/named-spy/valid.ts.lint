@@ -1,0 +1,21 @@
+var result = someFunc()
+result = someFunc()
+const other = createSpy('onSuccess')
+const another = createSpy('onSuccess')
+let otherSpy = library.createSpy('onSuccess');
+otherSpy = library.createSpy('onSuccess')
+let onSuccess = jasmine.createSpy('onSuccess');
+onSuccess = jasmine.createSpy('onSuccess');
+foo(jasmine.createSpy('callback'))
+
+someObject = {
+  someFunc: jasmine.createSpy('someFunc')
+}
+
+someObj = {
+  someFunc: jasmine.createSpy('someFunc').and.callThrough()
+};
+
+function someFunc() {
+  this.spy = jasmine.createSpy('spy').and.callThrough();
+}
