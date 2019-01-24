@@ -3,7 +3,7 @@ describe('', () => {
     it('', function(): void {});
   });
   it('', function(): void {});
-  ~~ [no-newline]
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [no-newline]
   it('', function(): void {});
 });
 
@@ -12,33 +12,33 @@ describe('', () => {
     it('', function(): void {});
   });
   it('', function(): void {});\n
-  ~~ [no-newline]
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [no-newline]
   it('', function(): void {});
 });
 
 describe('', () => {
   beforeEach(function(): void {});
   it('', function(): void {});
-  ~~ [no-newline]
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [no-newline]
 });
 
 
 describe("", () => {
   beforeEach(function(): void {});\n
   it("", function(): void {});
-  ~~ [no-newline]
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [no-newline]
 });
 
 describe('', () => {
   describe('', () => {});
   describe('', () => {});
-  ~~~~~~~~ [no-newline]
+  ~~~~~~~~~~~~~~~~~~~~~~~ [no-newline]
 });
 
 describe('', () => {
   describe('', () => {});\n
   describe('', () => {});
-  ~~~~~~~~ [no-newline]
+  ~~~~~~~~~~~~~~~~~~~~~~~ [no-newline]
 })
 
-[no-newline]: 'No new line between declarations.'
+[no-newline]: No new line between declarations.
