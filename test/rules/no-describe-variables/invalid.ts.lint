@@ -1,0 +1,41 @@
+describe("My suite", () => {
+  let x;
+  ~~~~~~ [no-describe-vars]
+
+  beforeEach(function (): void {
+    x = 5;
+  });
+
+  it("doesn't work", function(): void {});
+});
+
+describe('My suite', () => {
+  const myValue: number = 5;
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~ [no-describe-vars]
+
+  it("doesn't work", function(): void {});
+});
+
+xdescribe("My suite", () => {
+  let x;
+  ~~~~~~ [no-describe-vars]
+
+  beforeEach(function (): void {
+    x = 5;
+  });
+
+  it("doesn't work", function(): void {});
+});
+
+fdescribe("My suite", () => {
+  let x;
+  ~~~~~~ [no-describe-vars]
+
+  beforeEach(function (): void {
+    x = 5;
+  });
+
+  it("doesn't work", function(): void {});
+});
+
+[no-describe-vars]: Test has variable declaration in the describe block.
