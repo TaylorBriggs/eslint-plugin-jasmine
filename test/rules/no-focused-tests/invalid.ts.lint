@@ -1,11 +1,11 @@
 ddescribe('My exclusive suite', function(): void {});
-~~~~~~~~~ [Unexpected ddescribe.]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Unexpected ddescribe.]
 
 iit('My exclusive test', function(): void {});
-~~~ [Unexpected iit.]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Unexpected iit.]
 
 fdescribe('My focused suite', function(): void {});
-~~~~~~~~~ [Unexpected fdescribe.]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Unexpected fdescribe.]
 
 fit('My focused test', function(): void {});
-~~~ [Unexpected fit.];
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Unexpected fit.]
