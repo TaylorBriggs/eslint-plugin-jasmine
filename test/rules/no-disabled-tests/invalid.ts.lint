@@ -1,0 +1,5 @@
+xdescribe("My disabled suite", function() {});
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Unexpected xdescribe.]
+
+xit("My disabled spec", function() {});
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Unexpected xit.]
