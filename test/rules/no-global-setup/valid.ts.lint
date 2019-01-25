@@ -6,6 +6,12 @@ const helper = (): void => {
   beforeEach(function: void () {});
 };
 
+describe('suite', () => {
+  helper();
+
+  it('', function(): void {});
+});
+
 describe.only('suite', () => {
   beforeAll(function(): void {
     let a: number = 1;
