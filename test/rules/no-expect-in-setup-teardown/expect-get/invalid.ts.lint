@@ -1,0 +1,9 @@
+beforeEach(function(): void {
+  $httpBackend.expectGET();
+  ~~~~~~~~~~~~~~~~~~~~~~~~~ [Unexpected "$httpBackend.expectGET()" call in "beforeEach()."]
+});
+
+beforeAll(function(): void {
+  return $httpBackend.expectGET();
+         ~~~~~~~~~~~~~~~~~~~~~~~~ [Unexpected "$httpBackend.expectGET()" call in "beforeAll()."]
+});

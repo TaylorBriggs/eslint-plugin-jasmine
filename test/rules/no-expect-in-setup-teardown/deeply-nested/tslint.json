@@ -1,0 +1,5 @@
+{
+  "rules": {
+    "no-expect-in-setup-teardown": [true, "a.deeply.nested().expect.expression()"]
+  }
+}

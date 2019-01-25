@@ -1,0 +1,4 @@
+afterEach(function(): void {
+  a.deeply.nested().expect.expression();
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Unexpected "a.deeply.nested().expect.expression()" call in "afterEach()."]
+});

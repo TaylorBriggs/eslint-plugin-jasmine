@@ -1,0 +1,24 @@
+beforeEach(function(): void {});
+afterEach(function(): void {});
+beforeAll(function(): void {});
+afterAll(function(): void {});
+it("", function(): void {
+  expect(true).toBe(true);
+});
+it("", function(): void {
+  return expectAsync(Promise.resolve(true)).toBe(true);
+});
+beforeEach(function(): void {
+  someOtherFunction();
+});
+afterEach(function(): void {
+  someOtherFunction();
+});
+beforeAll(function(): void {
+  someOtherFunction();
+});
+afterAll(function(): void {
+  someOtherFunction();
+});
+expect(true).toBe(true);
+expectAsync(Promise.resolve(true)).toBeResolvedTo(true);
