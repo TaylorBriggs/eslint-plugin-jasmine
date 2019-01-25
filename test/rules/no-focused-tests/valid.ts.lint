@@ -1,0 +1,7 @@
+describe('', function(): void {});
+describe('', function(): void {
+  it('', function(): void {});
+});
+const x: any = {
+  a: ddescribe
+};
