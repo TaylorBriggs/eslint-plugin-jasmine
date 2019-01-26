@@ -1,0 +1,63 @@
+it("", function(done): void {
+  somethingAsync()
+    .then((res) => {
+      expect(res).toBe(true);
+      done();
+    })
+    .catch(done.fail);
+});
+
+it("", function(done): void {
+  somethingAsync()
+    .then((res) => {
+      expect(res).toBe(true);
+      done();
+    })
+    .then(f)
+    .then(g)
+    .then(h)
+    .catch(done.fail);
+});
+
+it("", function(): Promise<any> {
+  return somethingAsync().then(res => expect(res).toBe(true));
+});
+
+it("", function(done): void {
+  asyncFunc().then(done, done.fail);
+});
+
+it('', function(done): void {
+  asyncFunc().then(done.fail, done);
+});
+
+it('should not care about the name of the first parameter', function(finished): void {
+  somethingAsync().then(finished, finished.fail);
+});
+
+it("", function(done): void {
+  somethingAsync()
+    .then((res) => {
+      expect(res).toBe(true);
+      done();
+    })
+    .catch(done.fail);
+});
+
+it("", function(done): void {
+  somethingAsync()
+    .then((res) => {
+      expect(res).toBe(true);
+      done();
+    })
+    .then(f)
+    .then(g)
+    .then(h)
+    .catch(done.fail);
+});
+
+it('', function(): Promise<any> {
+  return somethingAsync().then(res => expect(res).toBe(true));
+});
+
+it('should be fine to return a promise', () => somethingAsync().then(res => expect(res).toBe(true)));

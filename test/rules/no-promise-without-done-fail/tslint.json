@@ -1,0 +1,5 @@
+{
+  "rules": {
+    "no-promise-without-done-fail": true
+  }
+}
