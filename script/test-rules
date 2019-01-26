@@ -2,7 +2,26 @@
 # https://github.com/palantir/tslint-react/blob/master/scripts/test-rules
 
 ret=0;
-for path in `find test -name tslint.json`; do
+searchpath="test/rules"
+
+while [[ $# -gt 0 ]]; do
+key="$1"
+case $key in
+  -s|--search)
+  SEARCH="$2"
+  shift
+  shift
+  ;;
+esac
+done
+
+if [[ ${SEARCH+x} ]]; then
+  searchpath="$searchpath/$SEARCH"
+fi
+
+echo $searchpath
+
+for path in `find $searchpath -name tslint.json`; do
     ./node_modules/.bin/tslint -r ./lib/rules/ --test $path/..
     val=$?
     if [ "$val" -ne "0" ]; then
