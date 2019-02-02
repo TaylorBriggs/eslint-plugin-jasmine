@@ -1,0 +1,34 @@
+beforeEach(function(): void {
+  const mySpy = jasmine.createSpy();
+  spyOn(someObj, 'someMethod');
+});
+
+beforeAll(function(): void {
+  const mySpy = jasmine.createSpy();
+  spyOn(someObj, 'someMethod');
+});
+
+afterEach(function(): void {
+  const mySpy = jasmine.createSpy();
+  spyOn(someObj, 'someMethod');
+});
+
+afterAll(function(): void {
+  const mySpy = jasmine.createSpy();
+  spyOn(someObj, 'someMethod');
+});
+
+it('spec', function(): void {
+  const mySpy = jasmine.createSpy();
+  spyOn(someObj, 'someMethod');
+});
+
+describe('suite', () => {
+  beforeEach(function(this: ITestContext): void {
+    this.tape = jasmine.createSpyObj('tape', ['play', 'pause']);
+  });
+
+  it('spec', function(this: ITestContext): void {
+    expect(this.tape.play).toBeDefined();
+  });
+});
