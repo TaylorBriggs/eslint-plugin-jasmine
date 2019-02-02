@@ -4,10 +4,9 @@
   "main": "index.js",
   "directories": {
     "doc": "docs",
-    "test": "tests"
+    "test": "test"
   },
   "scripts": {
-    "build": "tsc",
     "test": "cross-env ./script/test-rules",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
