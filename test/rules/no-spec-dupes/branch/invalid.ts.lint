@@ -1,6 +1,6 @@
 it('Spec name', function(): void {});
 it('Spec name', function(): void {});
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Duplicate spec: "Spec name"]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Duplicate spec: "Spec name."]
 
 describe('parent context', () => {
   describe('same', () => {
@@ -8,6 +8,6 @@ describe('parent context', () => {
   });
   describe('same', () => {
     it('spec', function(): void {});
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Duplicate spec: "parent context same spec."]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Duplicate spec: "parent context same spec."]
   });
 });

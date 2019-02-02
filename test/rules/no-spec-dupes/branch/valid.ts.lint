@@ -13,7 +13,7 @@ describe('context', () => {
     it('spec', function(): void {});
   });
 });
-describe('different', () => {
+describe('context', () => {
   it('spec', function(): void {});
 });
 

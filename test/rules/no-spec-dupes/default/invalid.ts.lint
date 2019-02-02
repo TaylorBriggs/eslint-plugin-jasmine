@@ -1,7 +1,7 @@
 it('Same spec name', function(): void {});
 it('Same spec name', function(): void {});
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Duplicate spec: "Same spec name."]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Duplicate spec: "Same spec name."]
 
 it('Handling' + ' string ' + 'concatenation', function(): void {});
 it('Handling string concatenation', function(): void {});
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Duplicate spec: "Handling string concatenation."]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Duplicate spec: "Handling string concatenation."]
