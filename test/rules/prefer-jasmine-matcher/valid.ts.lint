@@ -1,0 +1,31 @@
+describe('', () => {
+  it('', function(): void {
+    expect(a).not.toBe(true);
+  });
+});
+
+describe('', () => {
+  it('', function(): void {
+    expect(1).toBeGreaterThan(0);
+  });
+});
+
+describe('', () => {
+  it('', function(): void {
+    const a = [];
+    expect(a.length).toBe(0);
+  });
+});
+
+describe('', () => {
+  it('', function(): void {
+    const a = 'ab';
+    expect(a instanceof String).toBe(true);
+  });
+});
+
+describe('', () => {
+  it('', function(): void {
+    expect();
+  });
+});
