@@ -1,0 +1,15 @@
+describe('My suite', () => {});
+fdescribe('My suite', function(): void {});
+ddescribe('My suite', () => {});
+xdescribe('My suite', function(): void {});
+describe('My suite', () => {
+  it('A spec', function(this: ITestContext): void {});
+});
+describe('My suite', function(): void {
+  it('a spec', function(this: ITestContext, done): void {});
+});
+describe('My suite', () => {
+  it('a spec', function(this: ITestContext, done): void {
+    done();
+  });
+});
