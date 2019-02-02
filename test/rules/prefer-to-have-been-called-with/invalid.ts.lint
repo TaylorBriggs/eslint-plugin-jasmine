@@ -1,0 +1,7 @@
+describe('', () => {
+  it('', function(): void {
+    f(1);
+    expect(f).toHaveBeenCalled();
+              ~~~~~~~~~~~~~~~~ [Prefer `toHaveBeenCalledWith.`]
+  });
+});

@@ -1,0 +1,26 @@
+describe('', () => {
+  it('', function(): void {
+    f(1);
+    expect(f).toHaveBeenCalledWith(1);
+  });
+});
+
+describe('', () => {
+  it('', function(): void {
+    f();
+    expect(f).toHaveBeenCalledWith();
+  });
+});
+
+describe('', () => {
+  it('', function(): void {
+    f(2);
+    expect(f).not.toHaveBeenCalledWith(1);
+  });
+});
+
+describe('', () => {
+  it('', function(): void {
+    expect(f).not.toHaveBeenCalled();
+  });
+});
