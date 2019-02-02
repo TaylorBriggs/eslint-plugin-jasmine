@@ -1,0 +1,11 @@
+describe('Same suite name', () => {});
+describe('Same suite name', () => {});
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Duplicate suite: "Same suite name."]
+
+describe('another', () => {
+  describe('context', () => {
+    describe('same', () => {});
+  });
+  describe('context same', () => {});
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Duplicate suite: "another context same."]
+});

@@ -1,0 +1,20 @@
+describe('The first suite name', () => {});
+describe('The second suite name', function(): void {});
+
+describe('unique', () => {
+  it('spec', function(): void {});
+});
+describe('different', function(): void {});
+
+describe('context', () => {
+  describe('unique', () => {
+    it('spec', function(this: ITestContext): void {});
+  });
+  describe('different', () => {
+    it('spec', function(this: ITestContext): void {});
+  });
+});
+
+describe('same', () => {
+  describe('same', () => {});
+});

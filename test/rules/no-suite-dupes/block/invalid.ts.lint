@@ -1,0 +1,10 @@
+describe('Same suite name', function(): void {});
+describe('Same suite name', () => {});
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Duplicate suite: "Same suite name."]
+
+describe('Parent context', () => {
+  describe('same block', function(): void {
+    describe('same block', () => {});
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Duplicate suite: "same block."]
+  });
+});
