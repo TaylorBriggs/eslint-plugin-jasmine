@@ -1,0 +1,17 @@
+let spy: any = spyOn(object, "property");
+               ~~~~~~~~~~~~~~~~~~~~~~~~~ [no-assign]
+
+spy = spyOn(object, "property");
+      ~~~~~~~~~~~~~~~~~~~~~~~~~ [no-assign]
+
+let someObj: any = {
+  spy: spyOn(object, 'property')
+       ~~~~~~~~~~~~~~~~~~~~~~~~~ [no-assign]
+};
+
+function anotherObj() {
+  this.spy = spyOn(object, 'property')
+             ~~~~~~~~~~~~~~~~~~~~~~~~~ [no-assign]
+}
+
+[no-assign]: The result of spyOn() should not be assigned.

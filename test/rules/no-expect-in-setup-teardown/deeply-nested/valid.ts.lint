@@ -1,0 +1,7 @@
+it('', function(): void {
+  a.deeply.nested().expect.expression();
+});
+
+it('', function(): void {
+  expect(true).toBe(true);
+});

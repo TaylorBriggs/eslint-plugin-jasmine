@@ -1,0 +1,7 @@
+describe('Same suite name', () => {});
+describe('Same suite name', function(): void {});
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Duplicate suite: "Same suite name."]
+
+describe('Handling' + ' string ' + 'concatenation', function(): void {});
+describe('Handling string concatenation', () => {});
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Duplicate suite: "Handling string concatenation."]

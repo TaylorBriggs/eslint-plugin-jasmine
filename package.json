@@ -1,25 +1,34 @@
 {
-  "name": "eslint-plugin-jasmine",
-  "description": "ESLint rules for Jasmine",
-  "main": "index.js",
+  "name": "tslint-plugin-jasmine",
+  "description": "TSLint rules for Jasmine",
+  "version": "0.0.0-development",
+  "main": "lib/index.js",
   "directories": {
     "doc": "docs",
-    "test": "tests"
+    "test": "test"
   },
   "scripts": {
-    "pretest": "standard",
-    "test": "mocha",
-    "watch": "mocha --watch",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "test": "npm run test:rules && npm run test:fixers",
+    "test:rules": "cross-env ./script/test-rules",
+    "test:fixers": "cross-env ./script/test-fixers",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
-    "eslint",
-    "eslint-plugin",
-    "eslintplugin",
-    "jasmine"
+    "tslint",
+    "tslint plugin",
+    "tslint-plugin",
+    "tslintplugin",
+    "jasmine",
+    "jasmine plugin",
+    "jasmine-plugin"
   ],
-  "author": "Tom Vincent <npm@tlvince.com> (http://tlvince.com/)",
+  "author": "Taylor Briggs <taylor.briggs.dev@gmail.com> (https://taylor-briggs.com)",
   "contributors": [
+    {
+      "name": "Tom Vincent",
+      "email": "npm@tlvince.com",
+      "url": "http://tlvince.com/"
+    },
     {
       "name": "Nicolas Fernandez",
       "url": "https://github.com/burabure"
@@ -28,27 +37,32 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tlvince/eslint-plugin-jasmine.git"
+    "url": "https://github.com/TaylorBriggs/tslint-plugin-jasmine.git"
   },
   "bugs": {
-    "url": "https://github.com/tlvince/eslint-plugin-jasmine/issues"
+    "url": "https://github.com/TaylorBriggs/tslint-plugin-jasmine/issues"
   },
-  "homepage": "https://github.com/tlvince/eslint-plugin-jasmine",
+  "homepage": "https://github.com/TaylorBriggs/tslint-plugin-jasmine",
   "devDependencies": {
-    "eslint": "^4.0.0",
-    "ghooks": "^2.0.0",
-    "mocha": "^3.1.2",
-    "semantic-release": "^6.3.2",
-    "standard": "^10.0.0",
-    "validate-commit-msg": "^2.8.2"
+    "@commitlint/cli": "7.3.2",
+    "@commitlint/config-conventional": "7.3.1",
+    "cross-env": "^5.2.0",
+    "husky": "1.3.1",
+    "semantic-release": "^15.13.3",
+    "tslint": "5.12.1",
+    "typescript": "2.9.2"
   },
-  "config": {
-    "ghooks": {
-      "commit-msg": "validate-commit-msg"
-    }
+  "peerDependencies": {
+    "tslint": "^5.12",
+    "typescript": "^2.9"
   },
   "engines": {
-    "npm": ">=2",
-    "node": ">=4"
+    "npm": ">=6",
+    "node": ">=8"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }

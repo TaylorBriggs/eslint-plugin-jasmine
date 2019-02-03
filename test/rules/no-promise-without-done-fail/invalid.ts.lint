@@ -1,0 +1,48 @@
+it("", function(done): void {
+  somethingAsync.then((res) => {
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    expect(res).toBe(true);
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+    done();
+~~~~~~~~~~~
+  });
+~~~~~ [no-done-fail]
+});
+
+it("", function(done): void {
+  somethingAsync.then(
+  ~~~~~~~~~~~~~~~~~~~~
+    undefined,
+~~~~~~~~~~~~~~
+    (err) => {
+~~~~~~~~~~~~~~
+      expect(err).toBe(true);
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      done();
+~~~~~~~~~~~~~
+    });
+~~~~~~~ [no-done-fail]
+});
+
+it("", function(done): void {
+  somethingAsync()
+  ~~~~~~~~~~~~~~~~
+    .then(f)
+~~~~~~~~~~~~
+    .then((res) => {
+~~~~~~~~~~~~~~~~~~~~
+      expect(res).toBe(true);
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      done();
+~~~~~~~~~~~~~
+    });
+~~~~~~~ [no-done-fail]
+});
+
+it('should not care about the name of the first parameter', function (done): void {
+  const finished: string = "foo";
+  somethingAsync().then(done, finished.fail);
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [no-done-fail]
+});
+
+[no-done-fail]: An "it" that uses an async method should handle failure (use "done.fail").

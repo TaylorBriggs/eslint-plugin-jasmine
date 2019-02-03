@@ -1,0 +1,24 @@
+describe('', () => {
+  it('', function(): void {});
+
+  it('', function(): void {});
+});
+
+describe("", () => {
+  const a: number = 1;
+  beforeEach(function(): void {});
+
+  it('', function(): void {});
+});
+
+describe('', () => {
+  expect(1).toBe(1);
+});
+
+describe('', () => {
+  describe('', () => {
+    it('', function(): void {});
+  });
+
+  it('', function(): void {});
+});

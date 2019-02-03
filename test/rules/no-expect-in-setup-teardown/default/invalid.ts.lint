@@ -1,0 +1,39 @@
+beforeEach(function(): void {
+  expect(true).toBe(true);
+  ~~~~~~~~~~~~~~~~~~~~~~~~ [Unexpected "expect()" call in "beforeEach()."]
+});
+
+beforeEach(function(): void {
+  return expectAsync(Promise.resolve(true)).toBeResolvedTo(true);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Unexpected "expectAsync()" call in "beforeEach()."]
+});
+
+afterEach(function(): void {
+  expect(true).toBe(true);
+  ~~~~~~~~~~~~~~~~~~~~~~~~ [Unexpected "expect()" call in "afterEach()."]
+});
+
+afterEach(function(): void {
+  return expectAsync(Promise.resolve(true)).toBeResolvedTo(true);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Unexpected "expectAsync()" call in "afterEach()."]
+});
+
+beforeAll(function(): void {
+  expect(true).toBe(true);
+  ~~~~~~~~~~~~~~~~~~~~~~~~ [Unexpected "expect()" call in "beforeAll()."]
+});
+
+beforeAll(function(): void {
+  return expectAsync(Promise.resolve(true)).toBeResolvedTo(true);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Unexpected "expectAsync()" call in "beforeAll()."]
+});
+
+afterAll(function(): void {
+  expect(true).toBe(true);
+  ~~~~~~~~~~~~~~~~~~~~~~~~ [Unexpected "expect()" call in "afterAll()."]
+});
+
+afterAll(function(): void {
+  return expectAsync(Promise.resolve(true)).toBeResolvedTo(true);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Unexpected "expectAsync()" call in "afterAll()."]
+});

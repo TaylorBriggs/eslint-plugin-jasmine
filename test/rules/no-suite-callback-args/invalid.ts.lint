@@ -1,0 +1,29 @@
+describe('A suite', (done) => {});
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [no-suite-args]
+
+fdescribe('A suite', (done) => {});
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [no-suite-args]
+
+xdescribe('A suite', function(this: ITestContext, done): void {});
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [no-suite-args]
+
+describe('A suite', (done) => {
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  it('a spec', function(this: ITestContext): void {});
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+});
+~~ [no-suite-args]
+
+describe('A suite', function(this: ITestContext, done): void {
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  it('a spec', function(this: ITestContext, done): void {});
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+});
+~~ [no-suite-args]
+
+describe('A suite', () => {
+  describe('', (done) => {});
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~ [no-suite-args]
+});
+
+[no-suite-args]: Unexpected argument in suite's callback.

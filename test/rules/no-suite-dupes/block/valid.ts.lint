@@ -1,0 +1,2 @@
+describe('The first suite name', () => {});
+describe('The second suite name', function(): void {});

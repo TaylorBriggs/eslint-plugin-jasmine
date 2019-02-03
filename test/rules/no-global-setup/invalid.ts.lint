@@ -1,0 +1,9 @@
+beforeEach(function(): void {});
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Do not use `beforeEach` outside a `describe` except for in global helpers.]
+afterEach(function(): void {});
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Do not use `afterEach` outside a `describe` except for in global helpers.]
+beforeAll(function(): void {});
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Do not use `beforeAll` outside a `describe` except for in global helpers.]
+afterAll(function(): void {});
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Do not use `afterAll` outside a `describe` except for in global helpers.]
+describe('suite', () => {});

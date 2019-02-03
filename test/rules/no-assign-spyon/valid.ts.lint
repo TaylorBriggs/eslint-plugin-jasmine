@@ -1,0 +1,2 @@
+let result: any = someFunc()
+result = someFunc()

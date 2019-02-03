@@ -1,0 +1,5 @@
+{
+  "rules": {
+    "no-suite-callback-args": true
+  }
+}

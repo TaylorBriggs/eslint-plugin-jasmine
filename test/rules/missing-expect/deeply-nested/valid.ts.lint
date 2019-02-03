@@ -1,0 +1,1 @@
+it('', function() {a.deeply.nested().expect.expression()})

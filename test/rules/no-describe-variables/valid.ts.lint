@@ -1,0 +1,11 @@
+describe("My suite", function(): void {
+  it("works", function(): void {});
+});
+
+xdescribe('my suite', () => {
+  it('works', function(): void {});
+});
+
+fdescribe('my suite', function(): void {
+  it('works', function(): void {});
+});

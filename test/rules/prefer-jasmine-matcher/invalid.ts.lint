@@ -1,0 +1,30 @@
+describe('', () => {
+  it('', function(): void {
+    expect(1 === 1).toBe(true);
+    ~~~~~~~~~~~~~~~ [prefer-jasmine-matcher]
+  });
+});
+
+describe('', () => {
+  it('', function(): void {
+    expect((1 === 1)).toBe(true);
+    ~~~~~~~~~~~~~~~~~ [prefer-jasmine-matcher]
+  });
+});
+
+describe('', () => {
+  it('', function(): void {
+    expect(1 < 2).toBe(true);
+    ~~~~~~~~~~~~~ [prefer-jasmine-matcher]
+  });
+});
+
+describe('', () => {
+  it('', function(): void {
+    let a = [];
+    expect(a.length === 0).toBe(true);
+    ~~~~~~~~~~~~~~~~~~~~~~ [prefer-jasmine-matcher]
+  });
+});
+
+[prefer-jasmine-matcher]: Prefer jasmine matcher instead of comparison.

@@ -1,0 +1,7 @@
+it('', function(): void {
+  $httpBackend.expectGET();
+});
+
+it('', function(): void {
+  return $httpBackend.expectGET();
+});

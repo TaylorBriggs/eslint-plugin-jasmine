@@ -1,0 +1,16 @@
+it('The first spec name', function(): void {});
+it('The second spec name', function(): void {});
+
+unrelated('The first spec name', function(): void {});
+unrelated('The second spec name', function(): void {});
+
+justAFunction();
+
+it('Handling' + ' string ' + 'concatenation', function(): void {});
+
+describe('context', () => {
+  it('different', function(): void {});
+});
+describe('context', () => {
+  it('unique', function(): void {});
+});

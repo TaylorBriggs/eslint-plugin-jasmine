@@ -1,0 +1,9 @@
+describe("", function(): void {});
+
+describe("", function(): void {
+  it("", function(): void {});
+});
+
+x: any = {
+  a: xdescribe
+};

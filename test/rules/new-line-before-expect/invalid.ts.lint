@@ -1,0 +1,37 @@
+describe("", function(): void {
+  it("", function(): void {
+    let a: number = 1
+    expect(1).toBe(1)
+    ~~~~~~~~~~~~~~~~~ [no-newline]
+  });
+});
+
+
+it("", helper(function(): void {
+  const a: number = 1
+  expect(a).toEqual(1);
+  ~~~~~~~~~~~~~~~~~~~~~ [no-newline]
+}));
+
+it("", helper(function(): void {
+  const a: number = 1
+  let b: number = 2
+  expect(a).toEqual(1); expect(b).toEqual(2);
+  ~~~~~~~~~~~~~~~~~~~~~ [no-newline]
+}));
+
+describe("", function(): void {
+  it("", function(): void {
+    var a: number = 1; expect(a).toBe(1)
+                       ~~~~~~~~~~~~~~~~~ [no-newline]
+  });
+});
+
+describe("", function(): void {
+  it("", function(): void {
+    let a: number = 1; expect(a).toBe(1); expect(a).not.toBe(0);
+                       ~~~~~~~~~~~~~~~~~~ [no-newline]
+  });
+});
+
+[no-newline]: No new line before expect.

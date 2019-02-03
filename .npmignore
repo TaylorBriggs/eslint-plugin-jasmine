@@ -1,6 +1,11 @@
-.npmignore
+.github/
+script/
+test/
 .editorconfig
 .gitattributes
+.gitignore
+.npmignore
+.nvmrc
 .travis.yml
-.vimrc
-.github
+commitlint.config.js
+tags
