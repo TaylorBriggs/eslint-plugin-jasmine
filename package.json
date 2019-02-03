@@ -7,8 +7,10 @@
     "test": "test"
   },
   "scripts": {
+    "ci": "npm t && npm run test:fixers",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "cross-env ./script/test-rules",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "test:fixers": "cross-env ./script/test-fixers"
   },
   "keywords": [
     "tslint",

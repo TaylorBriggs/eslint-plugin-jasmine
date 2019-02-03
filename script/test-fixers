@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+tslint --fix --rules-dir lib/rules test/fixers/**/*.ts
+ret=$?
+if [[ $ret = "0" ]]; then
+  git checkout test/fixers/**
+else
+  exit $ret
+fi

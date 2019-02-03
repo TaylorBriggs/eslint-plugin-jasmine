@@ -5,6 +5,8 @@ notifications:
   email: false
 node_js:
   - 8.12
+script:
+  - npm run ci
 before_script:
   - npm install -g npm@6.4.1
   - npm prune
