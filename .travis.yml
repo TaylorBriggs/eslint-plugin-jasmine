@@ -1,14 +1,9 @@
 sudo: false
 language: node_js
+node_js: 8.12
 cache: npm
-notifications:
-  email: false
-node_js:
-  - 8.12
-script:
-  - npm run ci
 before_script:
   - npm install -g npm@6.4.1
   - npm prune
 after_success:
-  - npm run semantic-release
+  - npx semantic-release
