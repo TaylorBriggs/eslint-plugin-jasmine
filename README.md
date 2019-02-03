@@ -17,7 +17,7 @@
 
 ```json
 {
-  "extends": ["tslint-plugin-jasmine:recommended"],
+  "extends": ["tslint-plugin-jasmine"],
   "rules": {
     // enable/disable rules
   }
@@ -26,29 +26,29 @@
 
 ### Rules
 
-If the recommended configuration is not used, no rules are enabled by default.
+No rules are enabled by default. You can use the recommended configuration:
 
-Rule                                | Recommended                        | Options
-----                                | -----------                        | -------
-[expect-matcher][]                  | 1,                                 |
-[expect-single-argument][]          | 1,                                 |
-[missing-expect][]                  | 0, `'expect()'`, `'expectAsync()'` | expectation function names
-[named-spy][]                       | 0                                  |
-[new-line-before-expect][]          | 1                                  |
-[new-line-between-declarations][]   | 1                                  |
-[no-assign-spyon][]                 | 0                                  |
-[no-describe-variables][]           | 0                                  |
-[no-disabled-tests][]               | 1                                  |
-[no-expect-in-setup-teardown][]     | 1, `'expect()'`, `'expectAsync()'` | expectation function names
-[no-focused-tests][]                | 2                                  |
-[no-global-setup][]                 | 2                                  |
-[no-promise-without-done-fail][]    | 1                                  |
-[no-spec-dupes][]                   | 1, `'block'`                       | `['block', 'branch']`
-[no-suite-callback-args][]          | 2                                  |
-[no-suite-dupes][]                  | 1, `'block'`                       | `['block', 'branch']`
-[no-unsafe-spy][]                   | 1                                  |
-[prefer-jasmine-matcher][]          | 1                                  |
-[prefer-to-have-been-called-with][] | 1                                  |
+Rule                                | Recommended                                                        | Options
+----                                | -----------                                                        | -------
+[expect-matcher][]                  | { "severity": "warning" }                                          |
+[expect-single-argument][]          | { "severity": "warning" }                                          |
+[missing-expect][]                  | { "severity": "off", "options": ["expect()", "expectAsync()"] }    | expectation function names
+[named-spy][]                       | { "severity": "off" }                                              |
+[new-line-before-expect][]          | { "severity": "warning" }                                          |
+[new-line-between-declarations][]   | { "severity": "warning" }                                          |
+[no-assign-spyon][]                 | { "severity": "off" }                                              |
+[no-describe-variables][]           | { "severity": "off" }                                              |
+[no-disabled-tests][]               | { "severity": "warning" }                                          |
+[no-expect-in-setup-teardown][]     | { "severity": "warning", "options" ["expect()", "expectAsync()"] } | expectation function names
+[no-focused-tests][]                | { "severity": "error" }                                            |
+[no-global-setup][]                 | { "severity": "error" }                                            |
+[no-promise-without-done-fail][]    | { "severity": "warning" }                                          |
+[no-spec-dupes][]                   | { "severity": "warning" }                                          | `'branch'`
+[no-suite-callback-args][]          | { "severity": "error" }                                            |
+[no-suite-dupes][]                  | { "severity": "warning" }                                          | `'branch'`
+[no-unsafe-spy][]                   | { "severity": "warning" }                                          |
+[prefer-jasmine-matcher][]          | { "severity": "warning" }                                          |
+[prefer-to-have-been-called-with][] | { "severity": "warning" }                                          |
 
 
 For example, using the recommended configuration, the `no-focused-tests` rule
