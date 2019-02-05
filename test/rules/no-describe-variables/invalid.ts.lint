@@ -38,4 +38,15 @@ fdescribe("My suite", () => {
   it("doesn't work", function(): void {});
 });
 
+describe('suite', () => {
+  describe('nested suite', () => {
+    let x;
+    ~~~~~~ [no-describe-vars]
+
+    beforeEach(function (): void {
+      x = jasmine.createSpy();
+    });
+  });
+});
+
 [no-describe-vars]: Test has variable declaration in the describe block.
