@@ -5,6 +5,7 @@ describe('', () => {
   it('', function(): void {});
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [no-newline]
   it('', function(): void {});
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [no-newline]
 });
 
 describe('', () => {
@@ -14,6 +15,7 @@ describe('', () => {
   it('', function(): void {});\n
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [no-newline]
   it('', function(): void {});
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [no-newline]
 });
 
 describe('', () => {
